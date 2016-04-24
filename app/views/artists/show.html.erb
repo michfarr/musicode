@@ -1,0 +1,31 @@
+<h1>Artists#show</h1>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-3">
+      <p>
+        <%= @artist.name %>
+      </p>
+    </div>
+
+    <div class="col-md-2">
+      <p>
+        <%= @artist.genre %>
+      </p>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-6"
+      <p>
+        <%= @artist.description %>
+      </p>
+    </div>
+
+    <div class="col-md-6 artist-img">
+        <%= image_tag(@artist.image) %>
+    </div>
+
+  </div>
+</div>

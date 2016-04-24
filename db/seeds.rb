@@ -35,231 +35,163 @@ artists = [
     also starred in and directed the 1986 concert film Home of the Brave.
   } ],
 
-  # ["", "", "",
-  # %{
-  #
-  # } ],
-  #
-  # ["", "", "",
-  # %{
-  #
-  # } ]
 ]
 
-artists.each do |name, genre, photo, description|
-  Artist.create(name: name, genre: genre, photo: photo, description: description)
+artists.each do |name, genre, image, description|
+  Artist.create(name: name, genre: genre, image: image, description: description)
 end
 
+artist_songs = {}
+artist_songs["Yung Lean"] = [
+    ["Blommer (Intro)",         "1:33", "Unknown Memory", 2014 ],
 
+    ["Blinded",                 "4:14", "Unknown Memory", 2014 ],
 
-artist_albums = {}
+    ["Sunrise Angel",           "3:00", "Unknown Memory", 2014 ],
 
-# var [ Artist.name ] = \n [ Album.name, Album.cover_art, Album.release_year ]
+    ["Yoshi City",              "3:45", "Unknown Memory", 2014 ],
 
-artist_albums["Yung Lean"] = [
-  ["Unknown Memory",    "temp.jpg",   2014  ]
-]
+    ["Ice Cold Smoke",          "1:41", "Unknown Memory", 2014 ],
 
-artist_albums["Pearl Jam"] = [
-  ["Ten",               "temp.jpg",   1991  ],
+    ["Dog Walk (Intermission)", "1:07", "Unknown Memory", 2014 ],
 
-  ["Yield",             "temp.jpg",   1998  ]
-]
+    ["Don't Go",                "3:56", "Unknown Memory", 2014 ],
 
-artist_albums["Laurie Anderson"] = [
-  ["Big Science",       "temp.jpg",   1982  ],
+    ["Ghosttown",               "5:10", "Unknown Memory", 2014 ],
 
-  ["Strange Angels",    "temp.jpg",   1989  ],
+    ["Monster",                 "4:15", "Unknown Memory", 2014 ],
 
-  ["Homeland",          "temp.jpg",   2012  ]
-]
+    ["Volt",                    "3:13", "Unknown Memory", 2014 ],
 
-# artist albums = [
-#   ["","temp.jpg",],
-#
-#   ["","temp.jpg",],
-#
-#   ["","temp.jpg",],
-#
-#   ["","temp.jpg",]
-# ]
-#
-# artist albums = [
-#   ["","temp.jpg",],
-#
-#   ["","temp.jpg",],
-#
-#   ["","temp.jpg",],
-#
-#   ["","temp.jpg",],
-#
-#   ["","temp.jpg",]
-# ]
+    ["Leanworld",               "3:59", "Unknown Memory", 2014 ],
 
-artist_albums.each do |artist_name, album_info|
+    ["Sandman",                 "2:59", "Unknown Memory", 2014 ],
+
+    ["Helt Ensam (Outro)",      "3:06", "Unknown Memory", 2014 ]
+  ]
+
+artist_songs["Pearl Jam"] = [
+    ["Once",                  "3:51", "Ten", 1991   ],
+
+    ["Even Flow",             "4:54", "Ten", 1991   ],
+
+    ["Alive",                 "5:40", "Ten", 1991   ],
+
+    ["Why Go",                "3:20", "Ten", 1991   ],
+
+    ["Black",                 "5:43", "Ten", 1991   ],
+
+    ["Jeremy",                "5:18", "Ten", 1991   ],
+
+    ["Oceans",                "2:42", "Ten", 1991   ],
+
+    ["Porch",                 "3:30", "Ten", 1991   ],
+
+    ["Garden",                "4:59", "Ten", 1991   ],
+
+    ["Deep",                  "4:18", "Ten", 1991   ],
+
+    ["Release",               "9:05", "Ten", 1991   ]
+  ]
+
+artist_songs["Pearl Jam"] = [
+    ["Brain of J.",           "2:49", "Yield", 1998  ],
+
+    ["Faithfull",             "4:18", "Yield", 1998  ],
+
+    ["No Way",                "4:19", "Yield", 1998  ],
+
+    ["Given to Fly",          "4:01", "Yield", 1998  ],
+
+    ["Wishlist",              "3:26", "Yield", 1998  ],
+
+    ["Pilate",                "3:00", "Yield", 1998  ],
+
+    ["Do the Evolution",      "3:54", "Yield", 1998  ],
+
+    ["Untitled",              "1:06", "Yield", 1998  ],
+
+    ["MFC",                   "2:27", "Yield", 1998  ],
+
+    ["Low Light",             "3:46", "Yield", 1998  ],
+
+    ["In Hiding",             "5:00", "Yield", 1998  ],
+
+    ["Push Me, Pull Me",      "2:28", "Yield", 1998  ],
+
+    ["All Those Yesterdays",  "7:47", "Yield", 1998  ]
+  ]
+
+artist_songs["Laurie Anderson"] = [
+    ["From the Air",                    "4:29", "Big Science",  1982  ],
+
+    ["Big Science",                     "6:25", "Big Science",  1982  ],
+
+    ["Sweaters",                        "2:18", "Big Science",  1982  ],
+
+    ["Walking & Falling",               "2:10", "Big Science",  1982  ],
+
+    ["Born, Never Asked",               "4:56", "Big Science",  1982  ],
+
+    ["O Superman (for Massenet)",       "8:21", "Big Science",  1982  ],
+
+    ["Example #22",                     "2:59", "Big Science",  1982  ],
+
+    ["Let X=X/It Tango",                "6:51", "Big Science",  1982  ]
+  ]
+
+artist_songs["Laurie Anderson"] = [
+    ["Strange Angels",                  "3:51", "Strange Angels", 1989  ],
+
+    ["Monkey's Paw",                    "4:33", "Strange Angels", 1989  ],
+
+    ["Coolsville",                      "4:34", "Strange Angels", 1989  ],
+
+    ["Ramon",                           "3:38", "Strange Angels", 1989  ],
+
+    ["Babydoll",                        "3:38", "Strange Angels", 1989  ],
+
+    ["Beautiful Red Dress",             "4:43", "Strange Angels", 1989  ],
+
+    ["The Day the Devil",               "4:00", "Strange Angels", 1989  ],
+
+    ["The Dream Before",                "3:03", "Strange Angels", 1989  ],
+
+    ["My Eyes",                         "5:29", "Strange Angels", 1989  ],
+
+    ["Hiawatha",                        "6:53", "Strange Angels", 1989  ]
+  ]
+
+  artist_songs[ "Laurie Anderson"] = [
+    ["Transitory Life",                 "6:52",   "Homeland",  2012  ],
+
+    ["My Right Eye",                    "5:01",   "Homeland",  2012  ],
+
+    ["Thinking of You",                 "4:12",   "Homeland",  2012  ],
+
+    ["Strange Perfumes",                "4:46",   "Homeland",  2012  ],
+
+    ["Only an Expert",                   "7:26",  "Homeland",  2012  ],
+
+    ["Falling",                         "3:19",   "Homeland",  2012  ],
+
+    ["Another Day in America",          "11:24",  "Homeland",  2012  ],
+
+    ["Bodies in Motion",                "7:10",   "Homeland",  2012  ],
+
+    ["Dark Time in the Revolution",     "5:19",   "Homeland",  2012  ],
+
+    ["The Lake",                        "5:39",   "Homeland",  2012  ],
+
+    ["The Beginning of Memory",         "2:45",   "Homeland",  2012  ],
+
+    ["Flow",                            "2:15",   "Homeland",  2012  ]
+  ]
+
+artist_songs.each do |artist_name, songs|
   artist = Artist.find_by( name: artist_name )
 
-  album_info.each do |name, cover, release_year|
-    Album.create( name: name, cover: cover, release_year: release_year, artist_id: artist.id)
-  end
-end
-
-
-
-album_songs = {}
-
-# var [Album.nam] = [ "Song.title,   Song.length" ] ]
-
-album_songs["Unknown Memory"] = [
-    ["Blommer (Intro)",         "1:33" ],
-
-    ["Blinded",                 "4:14" ],
-
-    ["Sunrise Angel",           "3:00" ],
-
-    ["Yoshi City",              "3:45" ],
-
-    ["Ice Cold Smoke",          "1:41" ],
-
-    ["Dog Walk (Intermission)", "1:07" ],
-
-    ["Don't Go",                "3:56" ],
-
-    ["Ghosttown",               "5:10" ],
-
-    ["Monster",                 "4:15" ],
-
-    ["Volt",                    "3:13" ],
-
-    ["Leanworld",               "3:59" ],
-
-    ["Sandman",                 "2:59" ],
-
-    ["Helt Ensam (Outro)",      "3:06" ]
-  ]
-
-album_songs["Ten"] = [
-    ["Once",                  "3:51"  ],
-
-    ["Even Flow",             "4:54"  ],
-
-    ["Alive",                 "5:40"  ],
-
-    ["Why Go",                "3:20"  ],
-
-    ["Black",                 "5:43"  ],
-
-    ["Jeremy",                "5:18"  ],
-
-    ["Oceans",                "2:42"  ],
-
-    ["Porch",                 "3:30"  ],
-
-    ["Garden",                "4:59"  ],
-
-    ["Deep",                  "4:18"  ],
-
-    ["Release",               "9:05"  ]
-  ]
-
-album_songs["Yield"] = [
-    ["Brain of J.",           "2:49"  ],
-
-    ["Faithfull",             "4:18"  ],
-
-    ["No Way",                "4:19"  ],
-
-    ["Given to Fly",          "4:01"  ],
-
-    ["Wishlist",              "3:26"  ],
-
-    ["Pilate",                "3:00"  ],
-
-    ["Do the Evolution",      "3:54"  ],
-
-    ["Untitled",              "1:06"  ],
-
-    ["MFC",                   "2:27"  ],
-
-    ["Low Light",             "3:46"  ],
-
-    ["In Hiding",             "5:00"  ],
-
-    ["Push Me, Pull Me",      "2:28"  ],
-
-    ["All Those Yesterdays",  "7:47"  ]
-  ]
-
-album_songs["Big Science"] = [
-    ["From the Air",                    "4:29"  ],
-
-    ["Big Science",                     "6:25"  ],
-
-    ["Sweaters",                        "2:18"  ],
-
-    ["Walking & Falling",               "2:10"  ],
-
-    ["Born, Never Asked",               "4:56"  ],
-
-    ["O Superman (for Massenet)",       "8:21"  ],
-
-    ["Example #22",                     "2:59"  ],
-
-    ["Let X=X/It Tango",                "6:51"  ]
-  ]
-
-album_songs["Strange Angels"] = [
-    ["Strange Angels",                  "3:51"  ],
-
-    ["Monkey's Paw",                    "4:33"  ],
-
-    ["Coolsville",                       "4:34"  ],
-
-    ["Ramon",                           "3:38"  ],
-
-    ["Babydoll",                        "3:38"  ],
-
-    ["Beautiful Red Dress",             "4:43"  ],
-
-    ["The Day the Devil",               "4:00"  ],
-
-    ["The Dream Before",                "3:03"  ],
-
-    ["My Eyes",                         "5:29"  ],
-
-    ["Hiawatha",                        "6:53"  ]
-  ]
-
-  album_songs[ "Homeland"] = [
-    ["Transitory Life",                 "6:52"  ],
-
-    ["My Right Eye",                    "5:01"  ],
-
-    ["Thinking of You",                 "4:12"  ],
-
-    ["Strange Perfumes",                "4:46"  ],
-
-    ["Only an Expert",                   "7:26"  ],
-
-    ["Falling",                         "3:19"  ],
-
-    ["Another Day in America",          "11:24" ],
-
-    ["Bodies in Motion",                "7:10"  ],
-
-    ["Dark Time in the Revolution",     "5:19"  ],
-
-    ["The Lake",                        "5:39"  ],
-
-    ["The Beginning of Memory",         "2:45"  ],
-
-    ["Flow",                            "2:15"  ]
-  ]
-
-album_songs.each do |album_name, songs|
-  album = Album.find_by( name: album_name )
-
-  songs.each do |title, length|
-    Song.create(title: title, length: length, album_id: album.id, artist_id: album.artist_id)
+  songs.each do |title, length, album, release_year|
+    Song.create(title: title, length: length, album: album, release_year: release_year, artist_id: artist.id)
   end
 end

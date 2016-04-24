@@ -1,0 +1,30 @@
+<h1>Artists</h1>
+
+<div class="container">
+
+  <% @artists.each do |artist| %>
+    <div class="row">
+
+      <div class="col-md-3">
+        <p><%= link_to artist.name, artist_path(artist) %></p>
+      </div>
+
+      <div class="col-md-3">
+        <p><%= artist.genre %></p>
+      </div>
+
+    </div>
+    <div class="row">
+
+      <div class="col-md-6 artist-img">
+          <p><%= image_tag(artist.image) %></p>
+      </div>
+
+      <div class="col-md-6">
+        <p><%= artist.description %></p>
+      </div>
+
+    </div>
+  <% end %>
+
+</div>
