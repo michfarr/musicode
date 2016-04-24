@@ -1,8 +1,6 @@
 class Artist < ActiveRecord::Base
-  mount_uploader :photo, ImageUploader
+  has_many :songs
+  accepts_nested_attributes_for :songs
 
-  has_many :albums
-  has_many :songs, as: :collection
-
-  validates_presence_of :name, :genre, :description
+  validates :name, :genre, :image, :description, presence: true
 end

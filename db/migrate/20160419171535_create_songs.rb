@@ -1,10 +1,10 @@
-class CreateAlbums < ActiveRecord::Migration
+class CreateSongs < ActiveRecord::Migration
   def change
-    create_table :albums do |t|
-      t.string :name
-      t.string :cover_art
+    create_table :songs do |t|
+      t.string :title
+      t.string :length
+      t.string :album
       t.integer :release_year
-      t.string :type
       t.references :artist, index: true, foreign_key: true
 
       t.timestamps null: false
