@@ -99,8 +99,8 @@ artist_albums["Laurie Anderson"] = [
 artist_albums.each do |artist_name, album_info|
   artist = Artist.find_by( name: artist_name )
 
-  album_info.each do |name, cover_art, release_year|
-    Album.create( name: name, cover_art: cover_art, release_year: release_year, artist_id: artist.id)
+  album_info.each do |name, cover, release_year|
+    Album.create( name: name, cover: cover, release_year: release_year, artist_id: artist.id)
   end
 end
 
