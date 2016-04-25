@@ -1,2 +1,19 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<h1>Songs</h1>
+
+<div class="container">
+
+  <% @songs.each do |song| %>
+    <div class="row">
+
+      <div class="col-md-3">
+        <p><%= song.title %></p>
+      </div>
+
+      <div class="col-md-3">
+        <p><%= song.length %></p>
+      </div>
+
+    </div>
+  <% end %>
+
+</div>
