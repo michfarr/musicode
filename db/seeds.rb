@@ -91,10 +91,8 @@ artist_songs["Pearl Jam"] = [
 
     ["Deep",                  "4:18", "Ten", 1991   ],
 
-    ["Release",               "9:05", "Ten", 1991   ]
-  ]
+    ["Release",               "9:05", "Ten", 1991   ],
 
-artist_songs["Pearl Jam"] = [
     ["Brain of J.",           "2:49", "Yield", 1998  ],
 
     ["Faithfull",             "4:18", "Yield", 1998  ],
@@ -137,10 +135,8 @@ artist_songs["Laurie Anderson"] = [
 
     ["Example #22",                     "2:59", "Big Science",  1982  ],
 
-    ["Let X=X/It Tango",                "6:51", "Big Science",  1982  ]
-  ]
+    ["Let X=X/It Tango",                "6:51", "Big Science",  1982  ],
 
-artist_songs["Laurie Anderson"] = [
     ["Strange Angels",                  "3:51", "Strange Angels", 1989  ],
 
     ["Monkey's Paw",                    "4:33", "Strange Angels", 1989  ],
@@ -159,10 +155,8 @@ artist_songs["Laurie Anderson"] = [
 
     ["My Eyes",                         "5:29", "Strange Angels", 1989  ],
 
-    ["Hiawatha",                        "6:53", "Strange Angels", 1989  ]
-  ]
+    ["Hiawatha",                        "6:53", "Strange Angels", 1989  ],
 
-  artist_songs[ "Laurie Anderson"] = [
     ["Transitory Life",                 "6:52",   "Homeland",  2012  ],
 
     ["My Right Eye",                    "5:01",   "Homeland",  2012  ],
