@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+  before_action :authenticate_user!, :except => [:home, :index, :show]
 
   def home
   end
@@ -45,7 +46,7 @@ class ArtistsController < ApplicationController
 
     redirect_to artists_path
   end
-    
+
   private
 
   def artist_params
